@@ -739,20 +739,66 @@ nav li a:hover:after {
 }
 
 .registration-info {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
     max-width: 800px;
-    margin: 0 auto 40px;
-    background: var(--color-primary);
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.registration-info p {
-    margin-bottom: 15px;
+.registration-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.registration-icon {
+    background-color: var(--color-primary);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.registration-icon i {
+    font-size: 24px;
+}
+
+.registration-text {
+    flex: 1;
+}
+
+.registration-text h3 {
+    color: var(--color-primary);
+    margin-bottom: 5px;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.registration-text p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--color-dark);
 }
 
 .registration-form {
@@ -1089,8 +1135,15 @@ footer::before {
         font-size: 1.1rem;
     }
     
-    .registration-info p {
-        font-size: 1.1rem;
+    .registration-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+    }
+    
+    .registration-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
     
     .image-frame {
