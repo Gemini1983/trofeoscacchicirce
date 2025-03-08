@@ -2,7 +2,10 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Trofeo Circe - II edizione - Torneo di scacchi semilampo open a San Felice Circeo">
+    <meta name="theme-color" content="#e63946">
+    <meta name="format-detection" content="telephone=yes">
     <title>Trofeo Circe - II edizione - Torneo di Scacchi</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -31,7 +34,10 @@
                     <img src="assets/logo_proloco.jpg" alt="Logo Pro Loco" class="logo">
                 </div>
             </div>
-            <nav>
+            <div class="mobile-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#torneo">IL TORNEO</a></li>
@@ -41,6 +47,15 @@
                 </ul>
             </nav>
         </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#torneo">IL TORNEO</a></li>
+                <li><a href="#regolamento">REGOLAMENTO</a></li>
+                <li><a href="#sponsor">SPONSOR</a></li>
+                <li><a href="#contatti">CONTATTI</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -303,6 +318,30 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Menu mobile toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            
+            function toggleMobileMenu() {
+                mobileNav.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                
+                if (mobileNav.classList.contains('active')) {
+                    mobileMenuToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
+                } else {
+                    mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            }
+            
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            
+            // Chiudi il menu quando si fa clic su un link
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
+            });
+            
+            // Codice esistente per il form
             const form = document.getElementById('registration-form');
             const popup = document.getElementById('success-popup');
             const closePopup = document.querySelector('.close-popup');
