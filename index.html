@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trofeo Circe - II edizione - Torneo di Scacchi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 448 512%22><path fill=%22%23e63946%22 d=%22M226.6 48H117.3l-63.7 64H24C10.7 112 0 122.7 0 136v32c0 13.3 10.7 24 24 24h4.2l16.1 112.9c-55.4 13.8-96.4 63.2-96.3 122.7.1 28.5 9.2 56.2 26.1 79.2 16.8 23 40.6 40.1 67.8 48.8 13.4 4.3 27.3 6.5 41.1 6.5 46.5 0 90.4-22.5 117.8-60.2 14.1-19.3 21.9-41.8 22.8-64.9h105.9c8.3 0 15.2-6.5 15.5-14.8l25.2-465.3C391.5 11.5 382.7 0 371.1 0H267.5c-9.5 0-17.1 7.8-16.7 17.2l9.7 178.4c-18.5-5.8-39.9-7.2-59.9-2.1V48zM160 128h64v64c0 25.4-19.9 47.7-44.6 55.4l-16.9-118c-1.5-10.5-10.2-18.2-20.7-19.3L96 104l31-31c1.9-.6 3.9-1 6-1h59l-32 56zm264 352H296.7c3.4-23.3 3.4-47 0-70.2l10.6-7.9c13.3-9.9 16-28.3 6.1-41.6s-28.3-16-41.6-6.1l-10.6 7.9-12-16-12 16-10.6-7.9c-13.3-9.9-31.7-7.2-41.6 6.1s-7.2 31.7 6.1 41.6l10.6 7.9c-11.3 76 33.9 157.2 112.4 170.6L296 480h128c8.8 0 16-7.2 16-16v-16c0-8.8-7.2-16-16-16zM24 512c-13.3 0-24-10.7-24-24v-16c0-13.3 10.7-24 24-24h133.9l25-56H24c-13.3 0-24-10.7-24-24v-16c0-13.3 10.7-24 24-24h193.9c13.1 0 24.6 8.4 28.6 20.8l13.2 41.2c11.3-25.1 28.7-46.5 50.3-63.1v-4.9c0-16.4 16.9-26.9 31.2-19.5l13.6 7c15.2 7.8 20.2 27.1 9.9 41.5l-6.6 9.2c21.3 3.7 41.6 12.5 59 25.8l12.2-36.7c.5-1.5.9-3.1 1.1-4.7l13.5-135.8H432l16 288z%22/></svg>">
+    <!-- EmailJS per l'invio di email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="assets/logo_odissea.jpg" alt="Logo Odissea" class="logo">
+                </div>
+                <div class="logo-wrapper">
+                    <img src="assets/logo_insieme90.jpg" alt="Logo Insieme90" class="logo">
+                </div>
+                <div class="logo-wrapper">
+                    <img src="assets/logo_dragone.jpg" alt="Logo Dragone" class="logo">
+                </div>
+                <div class="logo-wrapper proloco-wrapper">
+                    <img src="assets/logo_proloco.jpg" alt="Logo Pro Loco" class="logo">
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#torneo">IL TORNEO</a></li>
+                    <li><a href="#regolamento">REGOLAMENTO</a></li>
+                    <li><a href="#sponsor">SPONSOR</a></li>
+                    <li><a href="#contatti">CONTATTI</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="title-wrapper">
+                        <div class="title-container">
+                            <h1>Trofeo Circe</h1>
+                        </div>
+                        <h2 class="edition">II edizione</h2>
+                        <div class="title-decoration">
+                            <span class="decoration-line"></span>
+                            <i class="fa-solid fa-chess-queen decoration-icon"></i>
+                            <span class="decoration-line"></span>
+                        </div>
+                    </div>
+                    <p class="subtitle">Torneo di scacchi semilampo open</p>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <div class="date-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <div class="date-info">
+                                <span class="date-label">Data e Ora</span>
+                                <p>25 Maggio 2025</p>
+                                <p>Inizio ore 15:00</p>
+                            </div>
+                        </div>
+                        <div class="event-location">
+                            <div class="location-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-label">Luogo</span>
+                                <p>Piazza L. Lanzuisi</p>
+                                <p>San Felice Circeo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#iscrizione" class="btn-primary"><i class="fa-solid fa-chess-knight"></i> Iscriviti Ora</a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-frame maga-frame">
+                        <img src="assets/maga.png" alt="Maga Circe" class="maga-image">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,32L60,42.7C120,53,240,75,360,69.3C480,64,600,32,720,26.7C840,21,960,43,1080,53.3C1200,64,1320,64,1380,64L1440,64L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="torneo" class="info-section">
+            <div class="container">
+                <h2><i class="fa-solid fa-chess-board section-icon"></i> Il Torneo</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-chess-queen"></i>
+                        </div>
+                        <h3>Formato</h3>
+                        <p><i class="fa-solid fa-chess-pawn icon"></i> Torneo con 5 turni (10 min. a partita + 10 sec. per mossa)</p>
+                        <p><i class="fa-solid fa-users icon"></i> Massimo 40 iscritti</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3>Premi</h3>
+                        <p><i class="fa-solid fa-award icon"></i> Premi per i primi 3 classificati</p>
+                        <p><i class="fa-solid fa-graduation-cap icon"></i> Premi per i primi 3 under 18</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Evento Speciale</h3>
+                        <p><i class="fa-solid fa-chess icon"></i> A seguire simultanea con il Maestro Massimiliano Lucaroni</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="regolamento" class="rules-section">
+            <div class="container">
+                <h2><i class="fa-solid fa-book section-icon"></i> Regolamento</h2>
+                <div class="rules-content">
+                    <div class="rules-text">
+                        <div class="rules-header">
+                            <i class="fa-solid fa-chess-board rules-big-icon"></i>
+                            <p>Il Trofeo Circe si svolgerà secondo le regole ufficiali della Federazione Italiana Scacchi.</p>
+                        </div>
+                        <ul class="rules-list">
+                            <li><i class="fa-solid fa-check"></i> Sistema di gioco: Semilampo</li>
+                            <li><i class="fa-solid fa-check"></i> Turni: 5 turni</li>
+                            <li><i class="fa-solid fa-check"></i> Tempo di riflessione: 10 minuti a giocatore + 10 secondi per mossa</li>
+                            <li><i class="fa-solid fa-check"></i> Limite partecipanti: 40 iscritti</li>
+                            <li><i class="fa-solid fa-check"></i> Costo iscrizione: 10 € da versare il giorno del torneo</li>
+                        </ul>
+                    </div>
+                    <div class="rules-image">
+                        <img src="assets/locandina.jpeg" alt="Locandina del torneo" class="rules-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsor" class="sponsors-section">
+            <div class="container">
+                <h2><i class="fa-solid fa-handshake section-icon"></i> I Nostri Sponsor</h2>
+                <p class="sponsor-intro">Il Trofeo Circe è reso possibile grazie al generoso contributo dei nostri sponsor:</p>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <div class="sponsor-image">
+                            <img src="assets/logo_pane-e-vino-sponsor1.jpeg" alt="Pane e Vino" class="sponsor-logo">
+                        </div>
+                        <div class="sponsor-info">
+                            <h3>Pane e Vino</h3>
+                            <p class="sponsor-subtitle">Ristorante & Pizzeria</p>
+                            <div class="sponsor-details">
+                                <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/pane_e_vino_al_circeo/" target="_blank">pane_e_vino_al_circeo</a></p>
+                                <p class="sponsor-address">Via Garibaldi, 23 - San Felice Circeo (LT)</p>
+                                <p>Tel: 0773 547689</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-image">
+                            <img src="assets/logo_Templari_ristorante-sponsor2.jpeg" alt="I Templari" class="sponsor-logo">
+                        </div>
+                        <div class="sponsor-info">
+                            <h3>Ristorante Scuderie Templari</h3>
+                            <p class="sponsor-subtitle">Dal 2005</p>
+                            <div class="sponsor-details">
+                                <p><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/ScuderieTemplari/?locale=it_IT" target="_blank">ScuderieTemplari</a></p>
+                                <p class="sponsor-address">Via Giuseppe Garibaldi, 2/4, 04017 San Felice Circeo LT</p>
+                                <p>Tel: 0773 284207 - Cell: 3279970116</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-placeholder">
+                            <i class="fa-solid fa-image sponsor-placeholder-icon"></i>
+                            <p>Sponsor 3</p>
+                            <p class="sponsor-note">Logo in arrivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="iscrizione" class="registration-section">
+            <div class="container">
+                <h2><i class="fa-solid fa-pen-to-square section-icon"></i> Iscrizione</h2>
+                <div class="registration-info">
+                    <p><i class="fa-solid fa-coins icon-large"></i> Costo iscrizione: <strong>10 €</strong> da versare il giorno del torneo</p>
+                    <p><i class="fa-brands fa-whatsapp icon-large"></i> Pre-iscrizioni tramite WhatsApp al <strong>338 687 2466</strong> o mediante il modulo qui sotto</p>
+                </div>
+                <form class="registration-form" id="registration-form">
+                    <input type="hidden" name="recipient" value="mail.annunziata@gmail.com">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome"><i class="fa-solid fa-user"></i> Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cognome"><i class="fa-solid fa-user"></i> Cognome</label>
+                            <input type="text" id="cognome" name="cognome" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cellulare"><i class="fa-solid fa-phone"></i> Cellulare</label>
+                            <input type="tel" id="cellulare" name="cellulare" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data_nascita"><i class="fa-solid fa-calendar"></i> Data di nascita</label>
+                            <input type="date" id="data_nascita" name="data_nascita" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comune"><i class="fa-solid fa-location-dot"></i> Comune di residenza</label>
+                        <input type="text" id="comune" name="comune" required>
+                    </div>
+                    <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Invia Iscrizione</button>
+                </form>
+                <div id="success-popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-popup"><i class="fa-solid fa-times"></i></span>
+                        <i class="fa-solid fa-check-circle popup-icon"></i>
+                        <h3>Iscrizione Inviata!</h3>
+                        <p>La tua richiesta di iscrizione è stata inviata con successo. Riceverai presto una conferma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti" class="contact-section">
+            <div class="container">
+                <h2><i class="fa-solid fa-address-book section-icon"></i> Contatti</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p><i class="fa-brands fa-whatsapp contact-icon"></i> <strong>Iscrizioni:</strong> WhatsApp al 338 687 2466</p>
+                        <p><i class="fa-solid fa-location-dot contact-icon"></i> <strong>Luogo:</strong> Piazza L. Lanzuisi - San Felice Circeo</p>
+                        <p><i class="fa-solid fa-calendar-days contact-icon"></i> <strong>Data:</strong> 25 Maggio 2025, ore 15:00</p>
+                        <p><i class="fa-solid fa-envelope contact-icon"></i> <strong>Email:</strong> mail.annunziata@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <h3><i class="fa-solid fa-map"></i> Come Raggiungerci</h3>
+                    <p>Piazza L. Lanzuisi si trova nel centro di San Felice Circeo.</p>
+                    <div class="google-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d889.7918183388502!2d13.087995269654433!3d41.23302300676552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzJzU4LjkiTiAxM8KwMDUnMTkuMSJF!5e1!3m2!1sit!2sit!4v1741470861334!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="map-note"><i class="fa-solid fa-info-circle"></i> <strong>Nota:</strong> Per una visione più dettagliata, clicca sulla mappa e utilizza i controlli di zoom.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#torneo">Il Torneo</a></li>
+                <li><a href="#regolamento">Regolamento</a></li>
+                <li><a href="#sponsor">Sponsor</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+        <div class="footer-legal">
+            <p>&copy; 2025 Trofeo Circe - Torneo di Scacchi. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registration-form');
+            const popup = document.getElementById('success-popup');
+            const closePopup = document.querySelector('.close-popup');
+            
+            // Inizializza EmailJS con il tuo ID utente
+            // Dovrai registrarti su https://www.emailjs.com e ottenere il tuo ID utente
+            emailjs.init("TUO_USER_ID"); // Sostituisci "TUO_USER_ID" con il tuo ID utente EmailJS
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Mostra un messaggio di caricamento
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Invio in corso...';
+                submitBtn.disabled = true;
+                
+                // Raccogli i dati del form
+                const templateParams = {
+                    nome: document.getElementById('nome').value,
+                    cognome: document.getElementById('cognome').value,
+                    cellulare: document.getElementById('cellulare').value,
+                    data_nascita: document.getElementById('data_nascita').value,
+                    comune: document.getElementById('comune').value,
+                    to_email: "mail.annunziata@gmail.com" // L'email del destinatario
+                };
+                
+                // Invia l'email usando EmailJS
+                // Dovrai creare un servizio e un template su EmailJS
+                emailjs.send('default_service', 'template_iscrizione', templateParams)
+                    .then(function(response) {
+                        console.log('Email inviata con successo!', response.status, response.text);
+                        
+                        // Mostra il popup di successo
+                        popup.style.display = 'flex';
+                        
+                        // Resetta il form
+                        form.reset();
+                        
+                        // Ripristina il testo originale del pulsante
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    })
+                    .catch(function(error) {
+                        console.error('Errore nell\'invio dell\'email:', error);
+                        
+                        // Mostra un messaggio di errore
+                        alert('Si è verificato un errore nell\'invio dell\'iscrizione. Riprova più tardi o contattaci direttamente via WhatsApp.');
+                        
+                        // Ripristina il testo originale del pulsante
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+            });
+
+            closePopup.addEventListener('click', function() {
+                popup.style.display = 'none';
+            });
+
+            // Chiudi il popup se si clicca fuori dal contenuto
+            window.addEventListener('click', function(e) {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
