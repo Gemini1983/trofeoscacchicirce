@@ -47,7 +47,7 @@
                 </ul>
             </nav>
         </div>
-        <nav class="mobile-nav">
+        <div class="mobile-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#torneo">IL TORNEO</a></li>
@@ -55,7 +55,7 @@
                 <li><a href="#sponsor">SPONSOR</a></li>
                 <li><a href="#contatti">CONTATTI</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <main>
@@ -323,23 +323,39 @@
             const mobileNav = document.querySelector('.mobile-nav');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
             
-            function toggleMobileMenu() {
-                mobileNav.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
+            if(mobileMenuToggle && mobileNav) {
+                function toggleMobileMenu() {
+                    mobileNav.classList.toggle('active');
+                    document.body.classList.toggle('menu-open');
+                    
+                    if (mobileNav.classList.contains('active')) {
+                        mobileMenuToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
+                    } else {
+                        mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                    }
+                }
                 
-                if (mobileNav.classList.contains('active')) {
-                    mobileMenuToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
-                } else {
-                    mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+                
+                // Chiudi il menu quando si fa clic su un link
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', toggleMobileMenu);
+                });
+            }
+            
+            // Verifica se siamo su mobile e nascondi il menu desktop
+            function checkMobileView() {
+                if (window.innerWidth <= 992) {
+                    const desktopNav = document.querySelector('.desktop-nav');
+                    if (desktopNav) {
+                        desktopNav.style.display = 'none';
+                    }
                 }
             }
             
-            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-            
-            // Chiudi il menu quando si fa clic su un link
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', toggleMobileMenu);
-            });
+            // Esegui subito e ad ogni ridimensionamento della finestra
+            checkMobileView();
+            window.addEventListener('resize', checkMobileView);
             
             // Codice esistente per il form
             const form = document.getElementById('registration-form');

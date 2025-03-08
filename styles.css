@@ -149,6 +149,7 @@ header {
     padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo-container {
@@ -1477,8 +1478,12 @@ footer::before {
     transition: color 0.3s ease;
     position: absolute;
     right: 20px;
-    top: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1001;
+    border: none;
+    background: transparent;
+    padding: 5px;
 }
 
 .mobile-menu-toggle:hover {
@@ -1554,11 +1559,19 @@ footer::before {
     }
     
     .desktop-nav {
-        display: none;
+        display: none !important;
     }
     
     .mobile-nav {
         display: block;
+    }
+    
+    header {
+        position: relative;
+    }
+    
+    .header-container {
+        padding: 10px 15px;
     }
 }
 
