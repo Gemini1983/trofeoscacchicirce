@@ -906,566 +906,237 @@ input:focus, select:focus {
     color: #555;
 }
 
-/* Contact Section */
+/* Contact Section - Ottimizzato per Mobile */
 .contact-section {
-    background-color: white;
+    background-color: var(--color-light);
+    padding: 5rem 0;
 }
 
 .contact-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 3rem;
 }
 
 .contact-info {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--color-light);
-    padding: 30px;
-    border-radius: 12px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
     box-shadow: var(--box-shadow);
+    flex: 1;
 }
 
 .contact-icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
     background-color: var(--color-primary);
     color: white;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    margin-right: 10px;
-    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
 }
 
 .contact-info p {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.contact-info p strong {
-    color: var(--color-secondary);
-    margin-right: 5px;
-    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .social-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex: 1;
-    min-width: 300px;
-    align-content: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
 
 .social-link {
-    background: var(--color-light);
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: var(--transition);
     display: flex;
     align-items: center;
-    flex: 1;
-    min-width: 180px;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: var(--color-dark);
+    text-decoration: none;
+    border-left: 3px solid var(--color-primary);
 }
 
 .social-link i {
     margin-right: 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
 }
 
 .social-link:hover {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
+    color: white;
     transform: translateY(-3px);
 }
 
+.social-link:hover i {
+    color: white;
+}
+
 .map-container {
-    background: var(--color-light);
-    padding: 35px;
-    border-radius: 12px;
-    margin-top: 30px;
-    position: relative;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
     box-shadow: var(--box-shadow);
+    margin-top: 30px;
 }
 
 .map-container h3 {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    color: var(--color-dark);
 }
 
 .map-container h3 i {
-    margin-right: 10px;
     color: var(--color-primary);
+    margin-right: 10px;
+    font-size: 1.2rem;
 }
 
-/* Footer */
-footer {
-    background-color: #1d3557;
-    color: white;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer::before {
-    display: none;
-}
-
-.footer-nav {
+.map-container p {
     margin-bottom: 20px;
 }
 
-.footer-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+.google-map {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.footer-nav a {
-    color: white;
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 16px;
-    text-decoration: none;
+.google-map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
 }
 
-.footer-nav a:hover {
-    text-decoration: underline;
+.map-note {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    border-left: 3px solid var(--color-secondary);
 }
 
-.footer-legal {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+.map-note i {
+    color: var(--color-secondary);
+    margin-right: 5px;
 }
 
-/* Responsive Styles */
+/* Media Queries per la sezione contatti */
 @media (max-width: 992px) {
-    .hero-content {
-        flex-direction: column;
-    }
-    
-    .rules-content {
-        flex-direction: column;
-    }
-    
-    h1 {
-        font-size: 3rem;
-    }
-    
-    .logo-wrapper {
-        height: 75px;
-    }
-    
-    .proloco-wrapper {
-        height: 75px;
-        width: 180px;
-    }
-    
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .event-details {
-        flex-direction: column;
-    }
-    
-    .container {
-        padding: 0 15px;
-    }
-    
-    section {
-        padding: 4rem 0;
-    }
-    
-    .sponsors-grid, .info-grid {
+    .contact-content {
         gap: 20px;
     }
     
-    .registration-info {
-        padding: 15px;
+    .google-map iframe {
+        height: 400px;
     }
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 10px 0;
-        position: relative;
-    }
-    
-    .header-container {
-        flex-direction: column;
-        position: relative;
-    }
-    
-    .logo-container {
-        margin-bottom: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav {
-        width: 100%;
-    }
-    
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 10px;
-    }
-    
-    nav li a {
-        font-size: 0.9rem;
-        padding: 5px 8px;
-    }
-    
-    .hero {
-        padding-top: 3rem;
-    }
-    
-    .hero-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .hero-text {
-        width: 100%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .title-wrapper {
-        width: 100%;
-    }
-    
-    h1 {
-        font-size: 3rem;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .edition {
-        font-size: 1.5rem;
-    }
-    
-    section {
-        padding: 4rem 0;
-    }
-    
-    .logo-wrapper {
-        height: 65px;
-    }
-    
-    .proloco-wrapper {
-        height: 65px;
-        width: 160px;
-    }
-    
-    .event-details {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-    
-    .event-date, .event-location {
-        margin-bottom: 15px;
-    }
-    
-    .registration-card, .sponsor-card, .info-card {
-        padding: 15px;
-    }
-    
-    .registration-form {
-        padding: 20px;
-    }
-    
-    .form-row {
-        flex-direction: column;
-    }
-    
-    .form-group {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    
-    input, select {
-        padding: 12px 15px;
-        font-size: 16px;
-    }
-    
-    .btn-primary {
-        width: 100%;
-        padding: 14px 20px;
-        font-size: 16px;
-    }
-    
-    .map-container iframe {
-        height: 350px;
+    .contact-section {
+        padding: 3rem 0;
     }
     
     .contact-content {
         flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact-info, .social-links, .map-container {
+        padding: 20px;
     }
     
     .social-links {
-        margin-top: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
+    }
+    
+    .social-link {
+        min-width: 160px;
+        justify-content: center;
+    }
+    
+    .map-container {
+        margin-top: 20px;
+    }
+    
+    .google-map iframe {
+        height: 350px;
     }
 }
 
 @media (max-width: 576px) {
-    .logo-container {
+    .contact-info p {
+        font-size: 1rem;
         flex-wrap: wrap;
-        justify-content: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 8px;
+    }
+    
+    .social-links {
+        flex-direction: column;
         gap: 10px;
     }
     
-    .logo-wrapper {
-        height: 55px;
-    }
-    
-    .proloco-wrapper {
-        height: 55px;
-        width: 150px;
-    }
-    
-    .info-card, .sponsor-card {
-        padding: 25px;
-    }
-    
-    .registration-form {
+    .social-link {
+        width: 100%;
         padding: 15px;
     }
     
-    h1 {
-        font-size: 2.5rem;
+    .google-map iframe {
+        height: 300px;
     }
     
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    h3 {
-        font-size: 1.3rem;
-    }
-    
-    .edition {
-        font-size: 1.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .btn-primary {
-        padding: 12px 20px;
+    .map-note {
+        padding: 12px;
         font-size: 0.9rem;
     }
     
-    .card-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 3rem;
-    }
-    
-    .rules-big-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-    }
-    
-    .footer-nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .footer-nav a {
-        font-size: 14px;
-    }
-    
-    .footer-legal {
+    .contact-info {
         text-align: center;
-        padding: 15px 10px;
     }
     
-    a, button, .social-link, .whatsapp-link {
-        padding: 8px 0;
-        display: inline-block;
+    .contact-info p {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
     }
     
-    .whatsapp-link {
-        padding: 5px 0;
+    .map-container h3 {
+        justify-content: center;
     }
     
-    .popup-content {
-        width: 90%;
-        max-width: 350px;
-        padding: 20px 15px;
+    .map-container p {
+        text-align: center;
     }
 }
 
-/* Stili per l'immagine maga.png */
-.maga-frame {
-    position: relative;
-    padding: 0;
-    background-color: transparent;
-    border-radius: 15px;
-    box-shadow: none;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-}
-
-.maga-image {
-    max-height: 650px;
-    max-width: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.25));
-    transform: scale(1.05);
-    transition: transform 0.5s ease;
-    z-index: 5;
-}
-
-.maga-image:hover {
-    transform: scale(1.08);
-}
-
-@media (max-width: 992px) {
-    .maga-image {
-        max-height: 550px;
-    }
-}
-
-@media (max-width: 768px) {
-    .maga-image {
-        max-height: 450px;
-    }
-}
-
-@media (max-width: 576px) {
-    .maga-image {
-        max-height: 350px;
-    }
-}
-
-/* Google Map */
-.google-map {
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-}
-
-.google-map iframe {
-    display: block;
-}
-
-/* Aggiustamento stile per il container della mappa */
-.map-container {
-    background: var(--color-light);
-    padding: 35px;
-    border-radius: 12px;
-    margin-top: 30px;
-    position: relative;
-    box-shadow: var(--box-shadow);
-}
-
-/* Stile per la nota sotto la mappa */
-.map-note {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-    font-style: italic;
-}
-
-.map-note i {
-    color: var(--color-primary);
-    margin-right: 5px;
-}
-
-.whatsapp-link {
-    color: #25D366;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-bottom: 1px dotted #25D366;
-    padding-bottom: 2px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.whatsapp-link:hover {
-    color: #128C7E;
-    border-bottom-color: #128C7E;
-}
-
-.whatsapp-link i {
-    font-size: 0.8em;
-    margin-top: 2px;
-}
-
-/* Fix per migliore interattività su dispositivi touch */
-@media (hover: none) {
-    .btn-primary:active {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 15px rgba(230, 57, 70, 0.4);
-    }
-    
-    .registration-card:active,
-    .sponsor-card:active,
-    .info-card:active {
-        transform: translateY(-5px);
-    }
-}
-
-/* Ottimizzazione per schermi molto piccoli */
 @media (max-width: 360px) {
-    h1 {
-        font-size: 2rem;
+    .contact-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
     }
     
-    .edition {
-        font-size: 1.2rem;
-    }
-    
-    .subtitle {
-        font-size: 1.1rem;
-    }
-    
-    nav li a {
-        font-size: 0.8rem;
-        padding: 5px;
-    }
-    
-    .logo-wrapper {
-        height: 60px;
-        margin: 0 5px;
-    }
-    
-    .registration-icon {
-        width: 50px;
-        height: 50px;
+    .contact-info p {
+        font-size: 0.95rem;
     }
 }
 
