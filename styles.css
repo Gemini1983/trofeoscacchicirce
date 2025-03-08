@@ -1295,4 +1295,25 @@ footer::before {
 .map-note i {
     color: var(--color-primary);
     margin-right: 5px;
+}
+
+.whatsapp-link {
+    color: #25D366;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 1px dotted #25D366;
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E;
+    border-bottom-color: #128C7E;
+}
+
+.whatsapp-link i {
+    font-size: 0.8em;
+    margin-top: 2px;
 } 
