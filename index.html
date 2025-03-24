@@ -396,6 +396,29 @@
                 gap: 5px;
             }
         }
+        
+        /* Stile per il campo textarea */
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+        }
+        
+        .form-group.textarea-group {
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 <body>
@@ -594,7 +617,7 @@
 
         <section id="iscrizione" class="registration-section">
             <div class="container">
-                <h2><i class="fa-solid fa-pen-to-square section-icon"></i> Iscrizione</h2>
+                <h2><i class="fa-solid fa-envelope section-icon"></i> Richiedi Informazioni</h2>
                 <div class="registration-info">
                     <div class="registration-card">
                         <div class="registration-icon">
@@ -632,23 +655,19 @@
                             <label for="cellulare"><i class="fa-solid fa-phone"></i> Cellulare</label>
                             <input type="tel" id="cellulare" name="cellulare" required>
                         </div>
-                        <div class="form-group">
-                            <label for="data_nascita"><i class="fa-solid fa-calendar"></i> Data di nascita</label>
-                            <input type="date" id="data_nascita" name="data_nascita" required>
-                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="comune"><i class="fa-solid fa-location-dot"></i> Comune di residenza</label>
-                        <input type="text" id="comune" name="comune" required>
+                    <div class="form-group textarea-group">
+                        <label for="richiesta"><i class="fa-solid fa-comment"></i> Richiesta</label>
+                        <textarea id="richiesta" name="richiesta" placeholder="Scrivi qui la tua richiesta di informazioni..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Invia Iscrizione</button>
+                    <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Invia Richiesta</button>
                 </form>
                 <div id="success-popup" class="popup">
                     <div class="popup-content">
                         <span class="close-popup"><i class="fa-solid fa-times"></i></span>
                         <i class="fa-solid fa-check-circle popup-icon"></i>
-                        <h3>Iscrizione Inviata!</h3>
-                        <p>La tua richiesta di iscrizione è stata inviata con successo. Riceverai presto una conferma.</p>
+                        <h3>Richiesta Inviata!</h3>
+                        <p>La tua richiesta di informazioni è stata inviata con successo. Ti risponderemo al più presto.</p>
                     </div>
                 </div>
             </div>
@@ -689,7 +708,7 @@
                                 <i class="fa-solid fa-envelope contact-icon"></i>
                             </span>
                             <span class="contact-text">
-                                <strong>Email:</strong> <a href="mailto:mail.annunziata@gmail.com" class="email-link">mail.annunziata@gmail.com</a>
+                                <strong>Email:</strong> <a href="mailto:trofeoscacchicirce@gmail.com" class="email-link">trofeoscacchicirce@gmail.com</a>
                             </span>
                         </p>
                     </div>
@@ -777,9 +796,16 @@
             const popup = document.getElementById('success-popup');
             const closePopup = document.querySelector('.close-popup');
             
-            // Inizializza EmailJS con il tuo ID utente
-            // Dovrai registrarti su https://www.emailjs.com e ottenere il tuo ID utente
-            emailjs.init("TUO_USER_ID"); // Sostituisci "TUO_USER_ID" con il tuo ID utente EmailJS
+            // ISTRUZIONI PER COMPLETARE LA CONFIGURAZIONE DI EMAILJS:
+            // 1. Accedi al tuo account EmailJS (emailjs.com)
+            // 2. Hai già configurato:
+            //    - Service ID: service_4ns7whw
+            //    - Template ID: template_oew8r4o
+            //    - Public Key: aTZ3sGBByP-tnBJjX
+            // 3. Ora il form dovrebbe funzionare correttamente
+
+            // Inizializza EmailJS con la tua Public Key
+            emailjs.init("aTZ3sGBByP-tnBJjX");
             
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -795,14 +821,13 @@
                     nome: document.getElementById('nome').value,
                     cognome: document.getElementById('cognome').value,
                     cellulare: document.getElementById('cellulare').value,
-                    data_nascita: document.getElementById('data_nascita').value,
-                    comune: document.getElementById('comune').value,
-                    to_email: "mail.annunziata@gmail.com" // L'email del destinatario
+                    richiesta: document.getElementById('richiesta').value,
+                    to_email: "trofeoscacchicirce@gmail.com", // L'email del destinatario
+                    bcc_email: "mail.annunziata@gmail.com" // L'email in copia nascosta
                 };
                 
                 // Invia l'email usando EmailJS
-                // Dovrai creare un servizio e un template su EmailJS
-                emailjs.send('default_service', 'template_iscrizione', templateParams)
+                emailjs.send('service_4ns7whw', 'template_oew8r4o', templateParams)
                     .then(function(response) {
                         console.log('Email inviata con successo!', response.status, response.text);
                         
@@ -820,7 +845,7 @@
                         console.error('Errore nell\'invio dell\'email:', error);
                         
                         // Mostra un messaggio di errore
-                        alert('Si è verificato un errore nell\'invio dell\'iscrizione. Riprova più tardi o contattaci direttamente via WhatsApp.');
+                        alert('Si è verificato un errore nell\'invio della richiesta. Riprova più tardi o contattaci direttamente via WhatsApp.');
                         
                         // Ripristina il testo originale del pulsante
                         submitBtn.innerHTML = originalBtnText;
