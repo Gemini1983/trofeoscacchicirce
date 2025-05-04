@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="Trofeo Circe - II edizione - Torneo di scacchi semilampo open a San Felice Circeo">
+    <meta name="description"
+        content="Trofeo Circe - II edizione - Torneo di scacchi semilampo open a San Felice Circeo">
     <meta name="theme-color" content="#e63946">
     <meta name="format-detection" content="telephone=yes">
     <title>Trofeo Circe - II edizione - Torneo di Scacchi</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 448 512%22><path fill=%22%23e63946%22 d=%22M226.6 48H117.3l-63.7 64H24C10.7 112 0 122.7 0 136v32c0 13.3 10.7 24 24 24h4.2l16.1 112.9c-55.4 13.8-96.4 63.2-96.3 122.7.1 28.5 9.2 56.2 26.1 79.2 16.8 23 40.6 40.1 67.8 48.8 13.4 4.3 27.3 6.5 41.1 6.5 46.5 0 90.4-22.5 117.8-60.2 14.1-19.3 21.9-41.8 22.8-64.9h105.9c8.3 0 15.2-6.5 15.5-14.8l25.2-465.3C391.5 11.5 382.7 0 371.1 0H267.5c-9.5 0-17.1 7.8-16.7 17.2l9.7 178.4c-18.5-5.8-39.9-7.2-59.9-2.1V48zM160 128h64v64c0 25.4-19.9 47.7-44.6 55.4l-16.9-118c-1.5-10.5-10.2-18.2-20.7-19.3L96 104l31-31c1.9-.6 3.9-1 6-1h59l-32 56zm264 352H296.7c3.4-23.3 3.4-47 0-70.2l10.6-7.9c13.3-9.9 16-28.3 6.1-41.6s-28.3-16-41.6-6.1l-10.6 7.9-12-16-12 16-10.6-7.9c-13.3-9.9-31.7-7.2-41.6 6.1s-7.2 31.7 6.1 41.6l10.6 7.9c-11.3 76 33.9 157.2 112.4 170.6L296 480h128c8.8 0 16-7.2 16-16v-16c0-8.8-7.2-16-16-16zM24 512c-13.3 0-24-10.7-24-24v-16c0-13.3 10.7-24 24-24h133.9l25-56H24c-13.3 0-24-10.7-24-24v-16c0-13.3 10.7-24 24-24h193.9c13.1 0 24.6 8.4 28.6 20.8l13.2 41.2c11.3-25.1 28.7-46.5 50.3-63.1v-4.9c0-16.4 16.9-26.9 31.2-19.5l13.6 7c15.2 7.8 20.2 27.1 9.9 41.5l-6.6 9.2c21.3 3.7 41.6 12.5 59 25.8l12.2-36.7c.5-1.5.9-3.1 1.1-4.7l13.5-135.8H432l16 288z%22/></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 448 512%22><path fill=%22%23e63946%22 d=%22M226.6 48H117.3l-63.7 64H24C10.7 112 0 122.7 0 136v32c0 13.3 10.7 24 24 24h4.2l16.1 112.9c-55.4 13.8-96.4 63.2-96.3 122.7.1 28.5 9.2 56.2 26.1 79.2 16.8 23 40.6 40.1 67.8 48.8 13.4 4.3 27.3 6.5 41.1 6.5 46.5 0 90.4-22.5 117.8-60.2 14.1-19.3 21.9-41.8 22.8-64.9h105.9c8.3 0 15.2-6.5 15.5-14.8l25.2-465.3C391.5 11.5 382.7 0 371.1 0H267.5c-9.5 0-17.1 7.8-16.7 17.2l9.7 178.4c-18.5-5.8-39.9-7.2-59.9-2.1V48zM160 128h64v64c0 25.4-19.9 47.7-44.6 55.4l-16.9-118c-1.5-10.5-10.2-18.2-20.7-19.3L96 104l31-31c1.9-.6 3.9-1 6-1h59l-32 56zm264 352H296.7c3.4-23.3 3.4-47 0-70.2l10.6-7.9c13.3-9.9 16-28.3 6.1-41.6s-28.3-16-41.6-6.1l-10.6 7.9-12-16-12 16-10.6-7.9c-13.3-9.9-31.7-7.2-41.6 6.1s-7.2 31.7 6.1 41.6l10.6 7.9c-11.3 76 33.9 157.2 112.4 170.6L296 480h128c8.8 0 16-7.2 16-16v-16c0-8.8-7.2-16-16-16zM24 512c-13.3 0-24-10.7-24-24v-16c0-13.3 10.7-24 24-24h133.9l25-56H24c-13.3 0-24-10.7-24-24v-16c0-13.3 10.7-24 24-24h193.9c13.1 0 24.6 8.4 28.6 20.8l13.2 41.2c11.3-25.1 28.7-46.5 50.3-63.1v-4.9c0-16.4 16.9-26.9 31.2-19.5l13.6 7c15.2 7.8 20.2 27.1 9.9 41.5l-6.6 9.2c21.3 3.7 41.6 12.5 59 25.8l12.2-36.7c.5-1.5.9-3.1 1.1-4.7l13.5-135.8H432l16 288z%22/></svg>">
     <!-- EmailJS per l'invio di email -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Stili migliorati per la visualizzazione mobile delle sezioni -->
@@ -23,14 +27,14 @@
             background-color: #f1faee;
             padding: 5rem 0;
         }
-        
+
         .contact-content {
             display: flex;
             justify-content: space-between;
             gap: 30px;
             margin-bottom: 3rem;
         }
-        
+
         .contact-info {
             background-color: white;
             padding: 25px;
@@ -38,18 +42,18 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             flex: 1;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
         }
-        
+
         .contact-icon-wrapper {
             display: inline-flex;
             margin-right: 12px;
         }
-        
+
         .contact-icon {
             background-color: #e63946;
             color: white;
@@ -61,18 +65,19 @@
             justify-content: center;
             font-size: 1rem;
         }
-        
+
         .contact-text {
             display: inline;
         }
-        
+
         .contact-text strong {
             font-weight: 600;
             color: #1d3557;
             margin-right: 5px;
         }
-        
-        .tel-link, .email-link {
+
+        .tel-link,
+        .email-link {
             color: #457b9d;
             text-decoration: none;
             font-weight: 600;
@@ -80,12 +85,13 @@
             padding-bottom: 2px;
             transition: all 0.3s ease;
         }
-        
-        .tel-link:hover, .email-link:hover {
+
+        .tel-link:hover,
+        .email-link:hover {
             color: #e63946;
             border-bottom-color: #e63946;
         }
-        
+
         .social-links {
             display: flex;
             flex-direction: column;
@@ -95,14 +101,14 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .map-container {
             background-color: white;
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .map-container h3 {
             display: flex;
             align-items: center;
@@ -110,19 +116,19 @@
             color: #1d3557;
             font-family: 'Playfair Display', serif;
         }
-        
+
         .map-container h3 i {
             margin-right: 10px;
             color: #e63946;
         }
-        
+
         .google-map {
             margin-bottom: 20px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .map-note {
             background-color: #f8f9fa;
             padding: 15px;
@@ -130,31 +136,31 @@
             border-left: 3px solid #457b9d;
             font-size: 0.95rem;
         }
-        
+
         .map-note i {
             color: #457b9d;
             margin-right: 5px;
         }
-        
+
         /* Nascondi titoli mobile su desktop */
         .mobile-only {
             display: none;
         }
-        
+
         /* Miglioramenti sezione contatti per mobile */
         @media (max-width: 768px) {
             .contact-content {
                 flex-direction: column;
                 gap: 20px;
             }
-            
+
             .contact-info {
                 background-color: white;
                 padding: 25px;
                 border-radius: 10px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             }
-            
+
             .social-links {
                 display: flex;
                 flex-direction: row;
@@ -163,21 +169,21 @@
                 gap: 15px;
                 margin-top: 0;
             }
-            
+
             .social-link {
                 min-width: 120px;
                 flex: 1;
                 justify-content: center;
             }
-            
+
             .map-container {
                 padding: 20px;
             }
-            
+
             .google-map iframe {
                 height: 350px;
             }
-            
+
             /* Visualizza titoli su mobile */
             .mobile-only {
                 display: block;
@@ -187,58 +193,58 @@
                 font-size: 1.4rem;
             }
         }
-        
+
         @media (max-width: 576px) {
             .contact-info {
                 text-align: center;
             }
-            
+
             .contact-item {
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: 20px;
             }
-            
+
             .contact-icon-wrapper {
                 margin-right: 0;
                 margin-bottom: 10px;
             }
-            
+
             .contact-icon {
                 width: 46px;
                 height: 46px;
                 font-size: 1.2rem;
                 margin-bottom: 8px;
             }
-            
+
             .contact-text {
                 display: block;
                 text-align: center;
             }
-            
+
             .social-links {
                 flex-direction: column;
                 gap: 10px;
             }
-            
+
             .social-link {
                 width: 100%;
             }
-            
+
             .map-container h3 {
                 justify-content: center;
                 text-align: center;
             }
-            
+
             .map-container p {
                 text-align: center;
             }
-            
+
             .google-map iframe {
                 height: 300px;
             }
         }
-        
+
         /* Footer stili migliorati */
         footer {
             background-color: #1d3557;
@@ -247,7 +253,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         footer::before {
             content: '';
             position: absolute;
@@ -258,18 +264,18 @@
             background: linear-gradient(90deg, #e63946, #457b9d);
             z-index: 2;
         }
-        
+
         .footer-top {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
-        
+
         .footer-nav {
             margin-bottom: 30px;
             width: 100%;
         }
-        
+
         .footer-nav ul {
             display: flex;
             justify-content: center;
@@ -279,7 +285,7 @@
             padding: 0;
             list-style: none;
         }
-        
+
         .footer-nav a {
             color: white;
             text-decoration: none;
@@ -292,14 +298,14 @@
             display: flex;
             align-items: center;
         }
-        
+
         .footer-icon {
             color: #a8dadc;
             margin-right: 8px;
             font-size: 0.9em;
             transition: all 0.3s ease;
         }
-        
+
         .footer-nav a::after {
             content: '';
             position: absolute;
@@ -310,19 +316,19 @@
             background-color: #e63946;
             transition: width 0.3s ease;
         }
-        
+
         .footer-nav a:hover {
             color: #e63946;
         }
-        
+
         .footer-nav a:hover .footer-icon {
             color: #e63946;
         }
-        
+
         .footer-nav a:hover::after {
             width: 100%;
         }
-        
+
         .footer-legal {
             text-align: center;
             padding-top: 20px;
@@ -330,42 +336,44 @@
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
         }
-        
+
         .footer-divider {
             display: inline-block;
             margin: 0 8px;
             color: rgba(255, 255, 255, 0.3);
         }
-        
+
         /* Miglioramenti sezione contatti per mobile */
         @media (max-width: 768px) {
+
             /* Footer responsive */
             footer {
                 padding: 30px 0 15px;
             }
-            
+
             .footer-nav ul {
                 gap: 25px;
             }
-            
+
             .footer-nav a {
                 font-size: 1rem;
                 padding: 8px 0;
             }
-            
+
             .footer-icon {
                 font-size: 1em;
             }
         }
-        
+
         @media (max-width: 576px) {
+
             /* Footer responsive su schermi piccoli */
             .footer-nav ul {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
             }
-            
+
             .footer-nav a {
                 font-size: 1rem;
                 display: flex;
@@ -374,29 +382,29 @@
                 width: 100%;
                 min-width: 200px;
             }
-            
+
             .footer-icon {
                 margin-right: 10px;
                 font-size: 1.1em;
             }
-            
+
             .footer-legal {
                 padding: 15px 20px 0;
                 font-size: 0.85rem;
                 line-height: 1.5;
             }
-            
+
             .footer-divider {
                 display: none;
             }
-            
+
             .footer-legal p {
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
             }
         }
-        
+
         /* Stile per il campo textarea */
         textarea {
             width: 100%;
@@ -409,18 +417,19 @@
             min-height: 120px;
             resize: vertical;
         }
-        
+
         textarea:focus {
             outline: none;
             border-color: var(--color-primary);
             box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
         }
-        
+
         .form-group.textarea-group {
             margin-bottom: 25px;
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
@@ -429,10 +438,11 @@
                     <img src="assets/logo_odissea.jpg" alt="Logo Odissea" class="logo">
                 </div>
                 <div class="logo-wrapper">
-                    <img src="assets/San_Felice_Circeo-Stemma-removebg-preview.png" alt="Stemma San Felice Circeo" class="logo">
+                    <img src="assets/logo_insieme90.jpg" alt="Logo Insieme90" class="logo">
                 </div>
                 <div class="logo-wrapper">
-                    <img src="assets/logo_insieme90.jpg" alt="Logo Insieme90" class="logo">
+                    <img src="assets/San_Felice_Circeo-Stemma-removebg-preview.png" alt="Stemma San Felice Circeo"
+                        class="logo">
                 </div>
                 <div class="logo-wrapper">
                     <img src="assets/logo_dragone.jpg" alt="Logo Dragone" class="logo">
@@ -514,7 +524,9 @@
             </div>
             <div class="hero-wave">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-                    <path fill="#ffffff" fill-opacity="1" d="M0,32L60,42.7C120,53,240,75,360,69.3C480,64,600,32,720,26.7C840,21,960,43,1080,53.3C1200,64,1320,64,1380,64L1440,64L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
+                    <path fill="#ffffff" fill-opacity="1"
+                        d="M0,32L60,42.7C120,53,240,75,360,69.3C480,64,600,32,720,26.7C840,21,960,43,1080,53.3C1200,64,1320,64,1380,64L1440,64L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z">
+                    </path>
                 </svg>
             </div>
         </section>
@@ -528,7 +540,8 @@
                             <i class="fa-solid fa-chess-queen"></i>
                         </div>
                         <h3>Formato</h3>
-                        <p><i class="fa-solid fa-chess-pawn icon"></i> Torneo con 5 turni (10 min. a partita + 10 sec. per mossa)</p>
+                        <p><i class="fa-solid fa-chess-pawn icon"></i> Torneo con 5 turni (10 min. a partita + 10 sec.
+                            per mossa)</p>
                         <p><i class="fa-solid fa-users icon"></i> Massimo 40 iscritti</p>
                     </div>
                     <div class="info-card">
@@ -544,7 +557,8 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
                         <h3>Evento Speciale</h3>
-                        <p><i class="fa-solid fa-chess icon"></i> A seguire simultanea con il Maestro Massimiliano Lucaroni</p>
+                        <p><i class="fa-solid fa-chess icon"></i> A seguire simultanea con il Maestro Massimiliano
+                            Lucaroni</p>
                     </div>
                 </div>
             </div>
@@ -557,14 +571,17 @@
                     <div class="rules-text">
                         <div class="rules-header">
                             <i class="fa-solid fa-chess-board rules-big-icon"></i>
-                            <p>Il Trofeo Circe si svolgerà secondo le regole ufficiali della Federazione Italiana Scacchi.</p>
+                            <p>Il Trofeo Circe si svolgerà secondo le regole ufficiali della Federazione Italiana
+                                Scacchi.</p>
                         </div>
                         <ul class="rules-list">
                             <li><i class="fa-solid fa-check"></i> Sistema di gioco: Semilampo</li>
                             <li><i class="fa-solid fa-check"></i> Turni: 5 turni</li>
-                            <li><i class="fa-solid fa-check"></i> Tempo di riflessione: 10 minuti a giocatore + 10 secondi per mossa</li>
+                            <li><i class="fa-solid fa-check"></i> Tempo di riflessione: 10 minuti a giocatore + 10
+                                secondi per mossa</li>
                             <li><i class="fa-solid fa-check"></i> Limite partecipanti: 40 iscritti</li>
-                            <li><i class="fa-solid fa-check"></i> Costo iscrizione: 10 € da versare il giorno del torneo</li>
+                            <li><i class="fa-solid fa-check"></i> Costo iscrizione: 10 € da versare il giorno del torneo
+                            </li>
                         </ul>
                     </div>
                     <div class="rules-image">
@@ -577,7 +594,8 @@
         <section id="sponsor" class="sponsors-section">
             <div class="container">
                 <h2><i class="fa-solid fa-handshake section-icon"></i> I Nostri Sponsor</h2>
-                <p class="sponsor-intro">Il Trofeo Circe è reso possibile grazie al generoso contributo dei nostri sponsor:</p>
+                <p class="sponsor-intro">Il Trofeo Circe è reso possibile grazie al generoso contributo dei nostri
+                    sponsor:</p>
                 <div class="sponsors-grid">
                     <div class="sponsor-card">
                         <div class="sponsor-image">
@@ -587,7 +605,9 @@
                             <h3>Pane e Vino</h3>
                             <p class="sponsor-subtitle">Wine Bar</p>
                             <div class="sponsor-details">
-                                <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/pane_e_vino_al_circeo/" target="_blank">pane_e_vino_al_circeo</a></p>
+                                <p><i class="fa-brands fa-instagram"></i> <a
+                                        href="https://www.instagram.com/pane_e_vino_al_circeo/"
+                                        target="_blank">pane_e_vino_al_circeo</a></p>
                                 <p class="sponsor-address">Piazza Vittorio Veneto, 24, 04017 San Felice Circeo LT</p>
                                 <p>Cell: 338 541 3396</p>
                             </div>
@@ -595,23 +615,35 @@
                     </div>
                     <div class="sponsor-card">
                         <div class="sponsor-image">
-                            <img src="assets/logo_Templari_ristorante-sponsor2.jpeg" alt="I Templari" class="sponsor-logo">
+                            <img src="assets/logo_Templari_ristorante-sponsor2.jpeg" alt="I Templari"
+                                class="sponsor-logo">
                         </div>
                         <div class="sponsor-info">
                             <h3>Ristorante Scuderie Templari</h3>
                             <p class="sponsor-subtitle">Ristorante</p>
                             <div class="sponsor-details">
-                                <p><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/ScuderieTemplari/?locale=it_IT" target="_blank">ScuderieTemplari</a></p>
+                                <p><i class="fa-brands fa-facebook"></i> <a
+                                        href="https://www.facebook.com/ScuderieTemplari/?locale=it_IT"
+                                        target="_blank">ScuderieTemplari</a></p>
                                 <p class="sponsor-address">Via Giuseppe Garibaldi 2-4, San Felice Circeo, Italy</p>
                                 <p>Tel: 0773 284207 - Cell: 3279970116</p>
                             </div>
                         </div>
                     </div>
                     <div class="sponsor-card">
-                        <div class="sponsor-placeholder">
-                            <i class="fa-solid fa-image sponsor-placeholder-icon"></i>
-                            <p>Sponsor 3</p>
-                            <p class="sponsor-note">Logo in arrivo</p>
+                        <div class="sponsor-image">
+                            <img src="assets/SIGMA-logo.jpeg" alt="Supermercato SIGMA" class="sponsor-logo">
+                        </div>
+                        <div class="sponsor-info">
+                            <h3>Supermercato SIGMA</h3>
+                            <p class="sponsor-subtitle">Supermercato</p>
+                            <div class="sponsor-details">
+                                <p><i class="fa-brands fa-facebook"></i> <a
+                                        href="https://www.facebook.com/p/Supermercato-Sigma-Circeo-100058108637932/"
+                                        target="_blank">Supermercato Sigma Circeo</a></p>
+                                <p class="sponsor-address">Via Sabaudia, 64, 04017 San Felice Circeo LT</p>
+                                <p>Tel: 0773 547764</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -628,7 +660,8 @@
                         </div>
                         <div class="registration-text">
                             <h3>Quota di Partecipazione</h3>
-                            <p>La quota d'iscrizione è di <strong>10 €</strong>, da versare direttamente il giorno del torneo presso la sede dell'evento.</p>
+                            <p>La quota d'iscrizione è di <strong>10 €</strong>, da versare direttamente il giorno del
+                                torneo presso la sede dell'evento.</p>
                         </div>
                     </div>
                     <div class="registration-card">
@@ -637,7 +670,11 @@
                         </div>
                         <div class="registration-text">
                             <h3>Come Iscriversi</h3>
-                            <p>Per iscriverti al torneo, invia un messaggio WhatsApp al numero <a href="https://wa.me/393386872466?text=Iscrizione%20Trofeo%20Circe%20-%20Nome%3A%20%5Binserisci%20nome%5D%20-%20Cognome%3A%20%5Binserisci%20cognome%5D%20-%20Data%20di%20nascita%3A%20%5Binserisci%20data%5D%20-%20Comune%20di%20nascita%3A%20%5Binserisci%20comune%5D" target="_blank" class="whatsapp-link"><strong>338 687 2466</strong> <i class="fa-solid fa-external-link-alt"></i></a>. Se hai domande, puoi utilizzare il modulo qui sotto per richiedere informazioni.</p>
+                            <p>Per iscriverti al torneo, invia un messaggio WhatsApp al numero <a
+                                    href="https://wa.me/393386872466?text=Iscrizione%20Trofeo%20Circe%20-%20Nome%3A%20%5Binserisci%20nome%5D%20-%20Cognome%3A%20%5Binserisci%20cognome%5D%20-%20Data%20di%20nascita%3A%20%5Binserisci%20data%5D%20-%20Comune%20di%20nascita%3A%20%5Binserisci%20comune%5D"
+                                    target="_blank" class="whatsapp-link"><strong>338 687 2466</strong> <i
+                                        class="fa-solid fa-external-link-alt"></i></a>. Se hai domande, puoi utilizzare
+                                il modulo qui sotto per richiedere informazioni.</p>
                         </div>
                     </div>
                 </div>
@@ -661,16 +698,19 @@
                     </div>
                     <div class="form-group textarea-group">
                         <label for="richiesta"><i class="fa-solid fa-comment"></i> Richiesta</label>
-                        <textarea id="richiesta" name="richiesta" placeholder="Scrivi qui la tua richiesta di informazioni..." required></textarea>
+                        <textarea id="richiesta" name="richiesta"
+                            placeholder="Scrivi qui la tua richiesta di informazioni..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Invia Richiesta</button>
+                    <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Invia
+                        Richiesta</button>
                 </form>
                 <div id="success-popup" class="popup">
                     <div class="popup-content">
                         <span class="close-popup"><i class="fa-solid fa-times"></i></span>
                         <i class="fa-solid fa-check-circle popup-icon"></i>
                         <h3>Richiesta Inviata!</h3>
-                        <p>La tua richiesta di informazioni è stata inviata con successo. Ti risponderemo al più presto.</p>
+                        <p>La tua richiesta di informazioni è stata inviata con successo. Ti risponderemo al più presto.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -687,7 +727,8 @@
                                 <i class="fa-brands fa-whatsapp contact-icon"></i>
                             </span>
                             <span class="contact-text">
-                                <strong>Iscrizioni:</strong> WhatsApp al <a href="tel:+393386872466" class="tel-link">338 687 2466</a>
+                                <strong>Iscrizioni:</strong> WhatsApp al <a href="tel:+393386872466"
+                                    class="tel-link">338 687 2466</a>
                             </span>
                         </p>
                         <p class="contact-item">
@@ -711,7 +752,8 @@
                                 <i class="fa-solid fa-envelope contact-icon"></i>
                             </span>
                             <span class="contact-text">
-                                <strong>Email:</strong> <a href="mailto:trofeoscacchicirce@gmail.com" class="email-link">trofeoscacchicirce@gmail.com</a>
+                                <strong>Email:</strong> <a href="mailto:trofeoscacchicirce@gmail.com"
+                                    class="email-link">trofeoscacchicirce@gmail.com</a>
                             </span>
                         </p>
                     </div>
@@ -726,9 +768,13 @@
                     <h3><i class="fa-solid fa-map"></i> Come Raggiungerci</h3>
                     <p>Piazza L. Lanzuisi si trova nel centro di San Felice Circeo.</p>
                     <div class="google-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d889.7918183388502!2d13.087995269654433!3d41.23302300676552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzJzU4LjkiTiAxM8KwMDUnMTkuMSJF!5e1!3m2!1sit!2sit!4v1741470861334!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d889.7918183388502!2d13.087995269654433!3d41.23302300676552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzJzU4LjkiTiAxM8KwMDUnMTkuMSJF!5e1!3m2!1sit!2sit!4v1741470861334!5m2!1sit!2sit"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <p class="map-note"><i class="fa-solid fa-info-circle"></i> <strong>Nota:</strong> Per una visione più dettagliata, clicca sulla mappa e utilizza i controlli di zoom.</p>
+                    <p class="map-note"><i class="fa-solid fa-info-circle"></i> <strong>Nota:</strong> Per una visione
+                        più dettagliata, clicca sulla mappa e utilizza i controlli di zoom.</p>
                 </div>
             </div>
         </section>
@@ -748,38 +794,39 @@
                 </nav>
             </div>
             <div class="footer-legal">
-                <p>&copy; 2025 Trofeo Circe - Torneo di Scacchi. <span class="footer-divider">|</span> Tutti i diritti riservati.</p>
+                <p>&copy; 2025 Trofeo Circe - Torneo di Scacchi. <span class="footer-divider">|</span> Tutti i diritti
+                    riservati.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Menu mobile toggle
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const mobileNav = document.querySelector('.mobile-nav');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-            
-            if(mobileMenuToggle && mobileNav) {
+
+            if (mobileMenuToggle && mobileNav) {
                 function toggleMobileMenu() {
                     mobileNav.classList.toggle('active');
                     document.body.classList.toggle('menu-open');
-                    
+
                     if (mobileNav.classList.contains('active')) {
                         mobileMenuToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
                     } else {
                         mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
                     }
                 }
-                
+
                 mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-                
+
                 // Chiudi il menu quando si fa clic su un link
                 mobileNavLinks.forEach(link => {
                     link.addEventListener('click', toggleMobileMenu);
                 });
             }
-            
+
             // Verifica se siamo su mobile e nascondi il menu desktop
             function checkMobileView() {
                 if (window.innerWidth <= 992) {
@@ -789,16 +836,16 @@
                     }
                 }
             }
-            
+
             // Esegui subito e ad ogni ridimensionamento della finestra
             checkMobileView();
             window.addEventListener('resize', checkMobileView);
-            
+
             // Codice esistente per il form
             const form = document.getElementById('registration-form');
             const popup = document.getElementById('success-popup');
             const closePopup = document.querySelector('.close-popup');
-            
+
             // ISTRUZIONI PER COMPLETARE LA CONFIGURAZIONE DI EMAILJS:
             // 1. Accedi al tuo account EmailJS (emailjs.com)
             // 2. Hai già configurato:
@@ -809,16 +856,16 @@
 
             // Inizializza EmailJS con la tua Public Key
             emailjs.init("aTZ3sGBByP-tnBJjX");
-            
-            form.addEventListener('submit', function(e) {
+
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Mostra un messaggio di caricamento
                 const submitBtn = form.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Invio in corso...';
                 submitBtn.disabled = true;
-                
+
                 // Raccogli i dati del form
                 const templateParams = {
                     nome: document.getElementById('nome').value,
@@ -828,40 +875,40 @@
                     to_email: "trofeoscacchicirce@gmail.com", // L'email del destinatario
                     bcc_email: "mail.annunziata@gmail.com" // L'email in copia nascosta
                 };
-                
+
                 // Invia l'email usando EmailJS
                 emailjs.send('service_4ns7whw', 'template_oew8r4o', templateParams)
-                    .then(function(response) {
+                    .then(function (response) {
                         console.log('Email inviata con successo!', response.status, response.text);
-                        
+
                         // Mostra il popup di successo
                         popup.style.display = 'flex';
-                        
+
                         // Resetta il form
                         form.reset();
-                        
+
                         // Ripristina il testo originale del pulsante
                         submitBtn.innerHTML = originalBtnText;
                         submitBtn.disabled = false;
                     })
-                    .catch(function(error) {
+                    .catch(function (error) {
                         console.error('Errore nell\'invio dell\'email:', error);
-                        
+
                         // Mostra un messaggio di errore
                         alert('Si è verificato un errore nell\'invio della richiesta. Riprova più tardi o contattaci direttamente via WhatsApp.');
-                        
+
                         // Ripristina il testo originale del pulsante
                         submitBtn.innerHTML = originalBtnText;
                         submitBtn.disabled = false;
                     });
             });
 
-            closePopup.addEventListener('click', function() {
+            closePopup.addEventListener('click', function () {
                 popup.style.display = 'none';
             });
 
             // Chiudi il popup se si clicca fuori dal contenuto
-            window.addEventListener('click', function(e) {
+            window.addEventListener('click', function (e) {
                 if (e.target === popup) {
                     popup.style.display = 'none';
                 }
@@ -869,4 +916,5 @@
         });
     </script>
 </body>
+
 </html>
