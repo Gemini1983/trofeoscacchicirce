@@ -459,6 +459,35 @@
                 flex-direction: column;
             }
             
+            /* Correzione visualizzazione loghi su mobile */
+            .logo-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 5px 15px 15px;
+                max-width: 100%;
+                overflow: visible;
+            }
+            
+            .logo-wrapper {
+                max-width: 65px;
+                margin: 0 5px;
+                overflow: visible;
+            }
+            
+            /* Logo Odissea non tagliato */
+            .logo-wrapper img[alt="Logo Odissea"] {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            
+            /* Logo Pro Loco non coperto dal menu */
+            .proloco-wrapper {
+                position: relative;
+                z-index: 2;
+            }
+            
             /* Hero section più compatta */
             .hero-content {
                 flex-direction: column;
