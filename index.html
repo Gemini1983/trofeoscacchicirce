@@ -645,15 +645,6 @@
             }
         }
 
-        @media (max-width: 576px) {
-            /* Continuo a nascondere i loghi su schermi più piccoli */
-            header .logo-container {
-                display: none !important;
-            }
-            
-            /* Rimuovo tutte le regole relative ai loghi */
-        }
-
         /* Aggiunta regola per loghi solo su desktop */
         @media (min-width: 769px) {
             .logo-container {
@@ -673,6 +664,167 @@
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            /* Continuo a nascondere i loghi su schermi più piccoli */
+            header .logo-container {
+                display: none !important;
+            }
+        }
+
+        /* Stili per la sezione organizzatori */
+        .organizers-section {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .organizers-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+        }
+
+        .organizers-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .organizers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .organizer-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .organizer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .organizer-image {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            height: 150px;
+        }
+
+        .organizer-logo {
+            max-height: 120px;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .municipality-logo {
+            max-height: 130px;
+        }
+
+        .organizer-info {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .organizer-info h3 {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .organizer-info p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .organizer-contact {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+
+        .organizer-contact p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .organizer-contact p i {
+            color: var(--color-secondary);
+            margin-right: 8px;
+            font-size: 0.95rem;
+            margin-top: 3px;
+        }
+
+        /* Responsive per la sezione organizzatori */
+        @media (max-width: 992px) {
+            .organizers-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .organizers-section {
+                padding: 3rem 0;
+            }
+
+            .organizer-image {
+                height: 120px;
+            }
+
+            .organizer-logo {
+                max-height: 90px;
+            }
+
+            .organizer-info {
+                padding: 20px;
+            }
+
+            .organizer-info h3 {
+                font-size: 1.3rem;
+            }
+
+            .organizer-info p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .organizer-contact p {
+                font-size: 0.85rem;
+                flex-direction: column;
+            }
+
+            .organizer-contact p i {
+                margin-bottom: 5px;
             }
         }
     </style>
@@ -709,6 +861,7 @@
                     <li><a href="#torneo">IL TORNEO</a></li>
                     <li><a href="#regolamento">REGOLAMENTO</a></li>
                     <li><a href="#sponsor">SPONSOR</a></li>
+                    <li><a href="#organizzatori">ORGANIZZATORI</a></li>
                     <li><a href="#contatti">CONTATTI</a></li>
                 </ul>
             </nav>
@@ -719,6 +872,7 @@
                 <li><a href="#torneo">IL TORNEO</a></li>
                 <li><a href="#regolamento">REGOLAMENTO</a></li>
                 <li><a href="#sponsor">SPONSOR</a></li>
+                <li><a href="#organizzatori">ORGANIZZATORI</a></li>
                 <li><a href="#contatti">CONTATTI</a></li>
             </ul>
         </div>
@@ -898,6 +1052,84 @@
             </div>
         </section>
 
+        <section id="organizzatori" class="organizers-section">
+            <div class="container">
+                <h2><i class="fa-solid fa-people-group section-icon"></i> Gli Organizzatori</h2>
+                <p class="organizers-intro">Il Trofeo Circe è frutto della collaborazione tra diverse realtà del territorio che condividono la passione per la cultura, lo sport e la valorizzazione di San Felice Circeo:</p>
+                
+                <div class="organizers-grid">
+                    <div class="organizer-card">
+                        <div class="organizer-image">
+                            <img src="assets/logo_odissea.jpg" alt="Logo Associazione Odissea" class="organizer-logo">
+                        </div>
+                        <div class="organizer-info">
+                            <h3>Associazione Odissea</h3>
+                            <p>L'Associazione "Odissea" è una realtà apartitica formata da giovani studenti e lavoratori che condividono l'impegno per la promozione di iniziative sociali, culturali e naturalistiche. Opera con l'obiettivo di contribuire alla tutela, alla valorizzazione e allo sviluppo del territorio di San Felice Circeo, con particolare attenzione al coinvolgimento consapevole e attivo delle nuove generazioni.</p>
+                            <div class="organizer-contact">
+                                <p><i class="fa-solid fa-location-dot"></i> Via Montenero 149 – 04017 San Felice Circeo (LT)</p>
+                                <p><i class="fa-solid fa-envelope"></i> PEC: associazioneodisseasfc@pec.it</p>
+                                <p><i class="fa-solid fa-id-card"></i> C.F.: 91134410595</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <div class="organizer-image">
+                            <img src="assets/logo_insieme90.jpg" alt="Logo Associazione Insieme 90" class="organizer-logo">
+                        </div>
+                        <div class="organizer-info">
+                            <h3>Associazione Insieme 90</h3>
+                            <p>L'Associazione Insieme 90 è un'organizzazione di promozione sociale nata a Borgo Montenero in occasione dei 90 anni dalla fondazione del borgo. Si impegna a promuovere iniziative culturali, sociali e solidali volte alla valorizzazione di Borgo Montenero e del territorio di San Felice Circeo, favorendo la riscoperta dell'identità locale e il rafforzamento del senso di comunità.</p>
+                            <div class="organizer-contact">
+                                <p><i class="fa-solid fa-location-dot"></i> Via Terracina km 11.200 – San Felice Circeo (LT)</p>
+                                <p><i class="fa-solid fa-phone"></i> 389 144 4582</p>
+                                <p><i class="fa-solid fa-envelope"></i> info@insieme90.it</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <div class="organizer-image">
+                            <img src="assets/logo_proloco.jpg" alt="Logo Pro Loco Circeo" class="organizer-logo">
+                        </div>
+                        <div class="organizer-info">
+                            <h3>Pro Loco Circeo</h3>
+                            <p>Fondata nel 1965, la Pro Loco di San Felice Circeo è un'associazione che da oltre cinquant'anni si dedica all'accoglienza turistica e alla promozione del territorio. La sua missione è valorizzare San Felice Circeo attraverso un'informazione accurata e orientata alla fruibilità del patrimonio naturale, storico e culturale del territorio.</p>
+                            <div class="organizer-contact">
+                                <p><i class="fa-solid fa-location-dot"></i> Piazza Lanzuisi 1, 04017 San Felice Circeo (LT)</p>
+                                <p><i class="fa-solid fa-phone"></i> Tel: +39 0773 547770 | Cell: +39 329 9166914</p>
+                                <p><i class="fa-solid fa-envelope"></i> info@prolococirceo.it</p>
+                                <p><i class="fa-solid fa-id-card"></i> P.IVA: 01636100594</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <div class="organizer-image">
+                            <img src="assets/logo_dragone.jpg" alt="Logo Circolo degli Scacchi Il Dragone" class="organizer-logo">
+                        </div>
+                        <div class="organizer-info">
+                            <h3>Circolo degli Scacchi Il Dragone</h3>
+                            <p>L'Associazione Sportiva Dilettantistica Circolo degli Scacchi Il Dragone, con sede a Latina e affiliata alla Federazione Scacchistica Italiana (FSI), nasce con l'obiettivo di formare nuovi atleti e accompagnarli nel percorso di crescita, attraverso l'attività didattica e la partecipazione a competizioni ufficiali in un ambiente sicuro, formativo e stimolante.</p>
+                            <div class="organizer-contact">
+                                <p>Il Circolo degli Scacchi Il Dragone è una vera e propria comunità: accogliente, appassionata e orientata alla crescita personale e sportiva dei propri soci.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <div class="organizer-image">
+                            <img src="assets/San_Felice_Circeo-Stemma-removebg-preview.png" alt="Stemma Comune di San Felice Circeo" class="organizer-logo municipality-logo">
+                        </div>
+                        <div class="organizer-info">
+                            <h3>Comune di San Felice Circeo</h3>
+                            <p>Il Comune di San Felice Circeo sostiene e patrocina l'iniziativa, riconoscendone il valore culturale, sportivo e di promozione del territorio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="iscrizione" class="registration-section">
             <div class="container">
                 <h2><i class="fa-solid fa-envelope section-icon"></i> Richiedi Informazioni</h2>
@@ -1036,6 +1268,7 @@
                         <li><a href="#torneo"><i class="fa-solid fa-chess-board footer-icon"></i> Il Torneo</a></li>
                         <li><a href="#regolamento"><i class="fa-solid fa-book footer-icon"></i> Regolamento</a></li>
                         <li><a href="#sponsor"><i class="fa-solid fa-handshake footer-icon"></i> Sponsor</a></li>
+                        <li><a href="#organizzatori"><i class="fa-solid fa-people-group footer-icon"></i> Organizzatori</a></li>
                         <li><a href="#contatti"><i class="fa-solid fa-address-book footer-icon"></i> Contatti</a></li>
                     </ul>
                 </nav>
