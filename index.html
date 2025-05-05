@@ -440,27 +440,32 @@
         @media (max-width: 768px) {
             /* Header e loghi più compatti */
             .logo-container {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                padding: 10px 15px;
+                justify-items: center;
             }
             
             .logo-wrapper {
                 max-width: 70px;
-                margin: 0 5px;
+                margin: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .logo-wrapper img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
             }
             
             /* Circeo logo migliorato */
             .circeo-wrapper {
-                width: auto;
-                text-align: center;
-                margin: 0 5px;
+                margin: 0;
                 max-width: 80px;
-                flex: 0 0 auto;
-            }
-
-            .circeo-wrapper .logo {
-                max-width: 100%;
+                width: 100%;
             }
             
             /* Stile header migliorato */
@@ -614,6 +619,27 @@
             
             .circeo-wrapper .logo {
                 max-width: 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Loghi su due righe per schermi molto piccoli */
+            .logo-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 15px;
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+            
+            /* Il quinto logo va centrato nella riga inferiore */
+            .logo-container .logo-wrapper:nth-child(5) {
+                grid-column: span 2;
+                max-width: 80px;
+            }
+            
+            .header-container {
+                padding: 10px 5px;
             }
         }
     </style>
